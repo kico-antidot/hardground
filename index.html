@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --verde-paris: #7FFF00;
+      --verde-paris: #1dd2af; /* Turquesa estilo Montana verde París */
       --negro: #000000;
       --gris-claro: #F5F5F5;
       --blanco: #FFFFFF;
@@ -41,6 +41,10 @@
       font-weight: 600;
       font-size: 0.9rem;
     }
+    .lang-selector {
+      margin-left: auto;
+      margin-right: 1rem;
+    }
     .hero {
       background-image: url("hero.jpg");
       background-size: cover;
@@ -60,13 +64,6 @@
     }
     .section {
       padding: 4rem 2rem;
-    }
-    .section h2 {
-      color: var(--verde-paris);
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid var(--gris-claro);
-      padding-bottom: 0.5rem;
     }
     .grid {
       display: grid;
@@ -108,14 +105,15 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="HARDGROUND Logo" height="40">
+    <img src="/mnt/data/bfu.png" alt="HARDGROUND Logo" height="50">
+    <div class="lang-selector">
+      <select onchange="location = this.value;">
+        <option value="#">Español</option>
+        <option value="en.html">English</option>
+      </select>
+    </div>
     <nav>
-      <a href="#tv">HG TV</a>
-      <a href="#hallofrail">Rail</a>
-      <a href="#farandwide">Wide</a>
-      <a href="#inkception">Ink</a>
-      <a href="#gainup">Music</a>
-      <a href="#noticias">News</a>
+      <a href="#home">Inicio</a>
       <a href="#tienda">Shop</a>
     </nav>
   </header>
@@ -125,63 +123,44 @@
     <p>Our Way of Life</p>
   </section>
 
-  <section class="section" id="tv">
-    <h2>HG TV</h2>
+  <section class="section" id="home">
     <div class="grid">
       <div class="card">
-        <img src="video-thumb.jpg" alt="Video">
-        <p>Documental del mes + contexto editorial.</p>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/zC5-YO7crg0" frameborder="0" allowfullscreen></iframe>
+        <p>Escalada urbana sobre tren parado | HARDGROUND MAGAZINE</p>
       </div>
       <div class="card">
-        <img src="video2.jpg" alt="Video">
-        <p>Entrevista con artista urbano.</p>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/lvd7UymMevE" frameborder="0" allowfullscreen></iframe>
+        <p>Movimiento sobre vías | Graffiti y riesgo real</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="hallofrail">
-    <h2>Hall of Rail</h2>
-    <div class="grid">
+      <div class="card">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/qqJztXYAfwI" frameborder="0" allowfullscreen></iframe>
+        <p>Barcelona Yard Actions | Captura clandestina de acción</p>
+      </div>
+      <div class="card">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/S9Ihh-B9DFw" frameborder="0" allowfullscreen></iframe>
+        <p>Documental: Intervención nocturna en convoy europeo.</p>
+      </div>
+      <div class="card">
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/lv4LjpJIbKc" frameborder="0" allowfullscreen></iframe>
+        <p>Entrevista a escritor de graffiti – visión y estilo.</p>
+      </div>
       <div class="card">
         <img src="metro.jpg" alt="Graffiti en metro">
         <p>Serie sobre piezas en movimiento.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="farandwide">
-    <h2>Far and Wide</h2>
-    <div class="grid">
       <div class="card">
         <img src="mural.jpg" alt="Graffiti global">
         <p>Reportajes sobre graffiti internacional.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="inkception">
-    <h2>Inkception</h2>
-    <div class="grid">
       <div class="card">
         <img src="tattoo.jpg" alt="Tatuaje">
         <p>Flash, tinta y estilo en piel.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="gainup">
-    <h2>Gain Up</h2>
-    <div class="grid">
       <div class="card">
         <img src="beat.jpg" alt="Música">
         <p>Sonido urbano y crudo desde el subsuelo.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="section" id="noticias">
-    <h2>Noticias</h2>
-    <div class="grid">
       <div class="card">
         <img src="news.jpg" alt="Noticias">
         <p>Lo último en cultura visual independiente.</p>
