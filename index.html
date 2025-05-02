@@ -22,59 +22,82 @@
       background-color: var(--blanco);
       color: var(--negro);
       line-height: 1.6;
-      padding: 2rem;
     }
     header {
+      position: sticky;
+      top: 0;
+      background: var(--blanco);
+      border-bottom: 1px solid var(--gris-claro);
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 0;
+      z-index: 100;
     }
     nav a {
-      margin-left: 1.5rem;
+      margin-left: 1rem;
       text-decoration: none;
       color: var(--negro);
-      font-weight: 700;
+      font-weight: 600;
+      font-size: 0.9rem;
     }
     .hero {
+      background-image: url("hero.jpg");
+      background-size: cover;
+      background-position: center;
+      color: var(--blanco);
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      margin: 4rem 0;
     }
     .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
+      font-size: 3.5rem;
+      background-color: rgba(0,0,0,0.5);
+      padding: 1rem;
     }
     .section {
-      margin-top: 3rem;
+      padding: 4rem 2rem;
     }
     .section h2 {
       color: var(--verde-paris);
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
+      border-bottom: 2px solid var(--gris-claro);
+      padding-bottom: 0.5rem;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem;
+      margin-top: 2rem;
     }
     .card {
       border: 1px solid var(--gris-claro);
       padding: 1rem;
+      background-color: var(--blanco);
+      transition: box-shadow 0.3s;
     }
-    select, button, input[type="email"] {
-      margin-top: 0.5rem;
-      padding: 0.5rem;
-      font-size: 1rem;
+    .card:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
     }
     footer {
-      margin-top: 4rem;
+      background: var(--gris-claro);
+      padding: 2rem;
       text-align: center;
       font-size: 0.9rem;
-      color: #888;
+      color: #444;
     }
     .footer-icons img {
       width: 24px;
-      margin: 0 5px;
+      margin: 0 10px;
     }
     .legal {
       margin-top: 1rem;
@@ -85,15 +108,15 @@
 </head>
 <body>
   <header>
-    <img src="bfu.png" alt="HARDGROUND Logo" height="50">
+    <img src="logo.png" alt="HARDGROUND Logo" height="40">
     <nav>
       <a href="#tv">HG TV</a>
-      <a href="#hallofrail">Hall of Rail</a>
-      <a href="#farandwide">Far & Wide</a>
-      <a href="#inkception">Inkception</a>
-      <a href="#gainup">Gain Up</a>
-      <a href="#noticias">Noticias</a>
-      <a href="#tienda">Tienda</a>
+      <a href="#hallofrail">Rail</a>
+      <a href="#farandwide">Wide</a>
+      <a href="#inkception">Ink</a>
+      <a href="#gainup">Music</a>
+      <a href="#noticias">News</a>
+      <a href="#tienda">Shop</a>
     </nav>
   </header>
 
@@ -103,72 +126,66 @@
   </section>
 
   <section class="section" id="tv">
-    <h2>HARDGROUND TV</h2>
+    <h2>HG TV</h2>
     <div class="grid">
-      <div class="card">Video destacado + contexto editorial</div>
+      <div class="card">
+        <img src="video-thumb.jpg" alt="Video">
+        <p>Documental del mes + contexto editorial.</p>
+      </div>
+      <div class="card">
+        <img src="video2.jpg" alt="Video">
+        <p>Entrevista con artista urbano.</p>
+      </div>
     </div>
   </section>
 
   <section class="section" id="hallofrail">
     <h2>Hall of Rail</h2>
     <div class="grid">
-      <div class="card">Graffiti en trenes y metros</div>
+      <div class="card">
+        <img src="metro.jpg" alt="Graffiti en metro">
+        <p>Serie sobre piezas en movimiento.</p>
+      </div>
     </div>
   </section>
 
   <section class="section" id="farandwide">
     <h2>Far and Wide</h2>
     <div class="grid">
-      <div class="card">Exploraciones de graffiti global</div>
+      <div class="card">
+        <img src="mural.jpg" alt="Graffiti global">
+        <p>Reportajes sobre graffiti internacional.</p>
+      </div>
     </div>
   </section>
 
   <section class="section" id="inkception">
     <h2>Inkception</h2>
     <div class="grid">
-      <div class="card">Cultura del tatuaje</div>
+      <div class="card">
+        <img src="tattoo.jpg" alt="Tatuaje">
+        <p>Flash, tinta y estilo en piel.</p>
+      </div>
     </div>
   </section>
 
   <section class="section" id="gainup">
     <h2>Gain Up</h2>
     <div class="grid">
-      <div class="card">Música, beats y entrevistas</div>
+      <div class="card">
+        <img src="beat.jpg" alt="Música">
+        <p>Sonido urbano y crudo desde el subsuelo.</p>
+      </div>
     </div>
   </section>
 
   <section class="section" id="noticias">
-    <h2>Noticias y Actualidad</h2>
-    <div class="grid">
-      <div class="card">Eventos, lanzamientos, cultura urbana</div>
-    </div>
-  </section>
-
-  <section class="section" id="tienda">
-    <h2>Tienda HARDGROUND</h2>
+    <h2>Noticias</h2>
     <div class="grid">
       <div class="card">
-        <h3>Mockup Camiseta "3-Sixteen"</h3>
-        <img src="3-Sixteen-T-Shirt-Gear-Patrol copia.jpg" alt="Mockup Camiseta 3-Sixteen" style="width:100%">
-        <p>Diseño simple, corte recto, inspirado en la cultura underground. Producto fuera de stock.</p>
-        <p><strong>Estado:</strong> Agotado</p>
-        <p><strong>Precio anterior:</strong> €18.00</p>
+        <img src="news.jpg" alt="Noticias">
+        <p>Lo último en cultura visual independiente.</p>
       </div>
-      <div class="card">
-        <h3>Mockup Camiseta "4-Sixteen"</h3>
-        <img src="4-Sixteen-T-Shirt-Gear-Patrol copia.jpg" alt="Mockup Camiseta 4-Sixteen" style="width:100%">
-        <p>Versión alternativa con detalles gráficos mínimos. Producto fuera de stock.</p>
-        <p><strong>Estado:</strong> Agotado</p>
-        <p><strong>Precio anterior:</strong> €18.00</p>
-      </div>
-    </div>
-    <div class="section" style="margin-top: 3rem; text-align: center;">
-      <h3>📦 Nuevos lanzamientos próximamente</h3>
-      <p>Estamos preparando nuevas piezas exclusivas. Suscríbete para recibir notificaciones y acceso anticipado.</p>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="email" name="email" placeholder="Tu correo electrónico" required style="padding: 0.5rem; width: 60%; max-width: 300px;">
-        <button type="submit" style="background: var(--verde-paris); color: var(--negro); padding: 0.5rem 1rem; border: none; cursor: pointer; margin-top: 1rem;">Suscribirme al newsletter</button>
-      </form>
     </div>
   </section>
 
@@ -176,13 +193,12 @@
     <div class="footer-icons">
       <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
       <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
-      <a href="#"><img src="shop-icon.png" alt="Tienda"></a>
+      <a href="#"><img src="shop-icon.png" alt="Shop"></a>
     </div>
     <p>&copy; 2025 HARDGROUND Magazine. Todos los derechos reservados.</p>
     <div class="legal">
-      <p>HARDGROUND es un medio de comunicación cultural. No fomentamos, promovemos ni justificamos actos de vandalismo. El contenido mostrado es documental y de carácter artístico. HARDGROUND no se responsabiliza por la interpretación ni el uso del material publicado.</p>
+      <p>HARDGROUND es un medio de comunicación cultural. No fomentamos, promovemos ni justificamos actos de vandalismo. El contenido mostrado es documental y de carácter artístico.</p>
       <p>Este sitio utiliza cookies propias y de terceros para mejorar la experiencia del usuario. Al continuar navegando, aceptas su uso.</p>
-      <p>Aviso legal | Política de privacidad | Condiciones de uso</p>
     </div>
   </footer>
 </body>

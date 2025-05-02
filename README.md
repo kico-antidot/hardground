@@ -1,14 +1,14 @@
-# HARDGROUND Website
+# HARDGROUND – Diseño FastDrips Minimal
 
-Este es el sitio oficial de HARDGROUND, una revista digital y plataforma cultural de arte urbano.
+Sitio web estático para la plataforma cultural HARDGROUND.
 
 ## Contenido
-- Secciones editoriales: HG TV, Hall of Rail, Far and Wide, Inkception, Gain Up y Noticias.
-- Tienda con mockups y catálogo de futuras ediciones.
-- Suscripción a newsletter.
+- Diseño inspirado en la estética tipo FastDrips
+- Fondo blanco, tipografía clara, enfoque visual en cuadrículas
+- Secciones: HG TV, Rail, Wide, Ink, Music, News, Shop
 
-## Cómo publicar
-1. Sube estos archivos a un repositorio público en GitHub.
-2. Activa GitHub Pages desde Settings > Pages.
-3. Elige la rama `main` y la carpeta `/root`.
-4. Accede a tu sitio en: `https://tuusuario.github.io/nombre-del-repo/`
+## Publicación en GitHub Pages
+1. Crear un repositorio público en GitHub
+2. Subir estos archivos (index.html + assets)
+3. Activar GitHub Pages desde Settings > Pages
+4. Seleccionar rama `main` y carpeta `/ (root)`
